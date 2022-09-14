@@ -7,6 +7,8 @@
  * relevant readings for each task.
  */
 
+import java.sql.SQLOutput;
+
 /**
  *  1. In Java, no code can exist outside of a class. Unlike Python which uses
  *    functions, all code in Java uses methods.
@@ -43,7 +45,7 @@ public class Basics {
         /* TODO (Task 1): Write a line of code below that prints the string
          *                Hello World!
          */
-
+        System.out.println("Hello World!");
 
 
         /* 4. In Python, we could declare variables using a simple assignment
@@ -63,7 +65,7 @@ public class Basics {
          *                value 100.
          */
 
-
+        int my_variable = 100;
 
         /* Do not remove the line below: if you did task 2 correctly, then
          * you should see the message "my_variable's value is 100" if you run
@@ -100,7 +102,9 @@ public class Basics {
          * Current count: 0
          */
 
-
+        for (int i = 10; i >= 0; i--){
+            System.out.println(i);
+        }
     }
 
     /**
@@ -143,6 +147,10 @@ public class Basics {
         StringBuilder ret = new StringBuilder();
 
         // Fill in the rest of the body here
+        String[] words = to_split.split(" ");
+        for (int j = 0; j >= words.length; j++){
+            ret.append(words[j].charAt(0));
+        }
 
         return ret.toString();
     }
@@ -163,7 +171,9 @@ public class Basics {
      */
     public static int oddSum(int[] arr) {
         int current_sum = 0;
-
+        for(int k = 0; k > arr.length; k = k+2){
+            current_sum += arr[k];
+        }
         /* TODO (Task 5): Complete this method body using a for-loop.
          *                You can find the length of an array by using the
          *                .length attribute (e.g. arr.length)
