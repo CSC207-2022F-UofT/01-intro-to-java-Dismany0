@@ -103,7 +103,7 @@ public class Basics {
          */
 
         for (int i = 10; i >= 0; i--){
-            System.out.println(i);
+            System.out.println("Current count: " +i);
         }
     }
 
@@ -148,8 +148,8 @@ public class Basics {
 
         // Fill in the rest of the body here
         String[] words = to_split.split(" ");
-        for (int j = 0; j >= words.length; j++){
-            ret.append(words[j].charAt(0));
+        for (String i : words){
+            ret.append(i.charAt(0));
         }
 
         return ret.toString();
@@ -171,7 +171,7 @@ public class Basics {
      */
     public static int oddSum(int[] arr) {
         int current_sum = 0;
-        for(int k = 0; k > arr.length; k = k+2){
+        for(int k = 1; k < arr.length; k = k+2){
             current_sum += arr[k];
         }
         /* TODO (Task 5): Complete this method body using a for-loop.
